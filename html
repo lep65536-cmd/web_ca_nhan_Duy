@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiều Vy - Personal Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f8f5;
+            color: #263b30;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #315c48;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #c9ddce;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 60px 8%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            color: #315c48;
+            margin: 15px 0;
+        }
+
+        .hero-text p {
+            color: #68756e;
+            font-size: 18px;
+        }
+
+        .hero img {
+            width: 300px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 150px 150px 20px 20px;
+            background-color: #dce8df;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #315c48;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #203e30;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #315c48;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            background-color: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #68756e;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #315c48;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #68756e;
+        }
+
+        .contact {
+            background-color: #e3ede5;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #315c48;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero img {
+                width: 240px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <h2>KIỀU VY.</h2>
+
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#hobbies">Sở thích</a>
+            <a href="#projects">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- TRANG CHỦ -->
+    <div class="hero" id="home">
+
+        <div class="hero-text">
+            <p>HELLO, WELCOME TO MY WEBSITE!</p>
+
+            <h1>Xin chào,<br>mình là Kiều Vy.</h1>
+
+            <p>
+                Mình là một sinh viên yêu thích học hỏi,
+                khám phá thế giới và phát triển bản thân
+                mỗi ngày.
+            </p>
+
+            <a href="#about" class="button">
+                Tìm hiểu về mình
+            </a>
+        </div>
+
+        <img src="https://placehold.co/300x380/dce8df/315c48?text=My+Photo"
+             alt="Ảnh đại diện Kiều Vy">
+
+    </div>
+
+    <!-- GIỚI THIỆU -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            Mình tên là Kiều Vy, quê ở Quảng Ngãi, Việt Nam.
+            Hiện tại mình đang là sinh viên.
+            Mình yêu thích kinh doanh, kinh tế quốc tế,
+            đọc sách và học ngoại ngữ.
+            Mình luôn muốn thử sức với những điều mới
+            để hoàn thiện bản thân và theo đuổi mục tiêu
+            trong tương lai.
+        </p>
+
+    </section>
+
+    <!-- SỞ THÍCH -->
+    <section id="hobbies">
+
+        <h2 class="section-title">My Hobbies</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>📚 Reading Books</h3>
+                <p>
+                    Mình thích đọc sách văn học,
+                    sách tình cảm và sách kinh tế.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌏 Traveling</h3>
+                <p>
+                    Mình yêu thích khám phá những
+                    địa điểm mới và tìm hiểu văn hóa.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📖 Learning English</h3>
+                <p>
+                    Mình muốn cải thiện tiếng Anh
+                    và mở rộng kiến thức mỗi ngày.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DỰ ÁN -->
+    <section id="projects" class="about">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Smart Eat Clean</h3>
+                <p>
+                    Dự án ứng dụng AI để gợi ý
+                    thực đơn ăn uống lành mạnh.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>International Business</h3>
+                <p>
+                    Tìm hiểu chiến lược kinh doanh
+                    và hoạt động thương mại quốc tế.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Personal Development</h3>
+                <p>
+                    Phát triển kỹ năng giao tiếp,
+                    thuyết trình và ngoại ngữ.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LIÊN HỆ -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>📧 Email: your-email@example.com</p>
+
+        <p>📍 Location: Vietnam</p>
+
+        <p>
+            Cảm ơn bạn đã ghé thăm website cá nhân của mình!
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Kiều Vy | Personal Website</p>
+    </footer>
+
+</body>
+</html>
